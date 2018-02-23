@@ -46,7 +46,7 @@ def naive_approach_3():
         if i % 5 == 0:
             output += "Buzz"
         if output == "":
-            output += i
+            output += str(i)
         print(output)
 
 
@@ -66,7 +66,7 @@ def lets_add_parameters(length, fizz_number, buzz_number):
         if i % buzz_number == 0:
             output += "Buzz"
         if output == "":
-            output += i
+            output += str(i)
         print(output)
 
 
@@ -88,7 +88,7 @@ def what_if_we_want_more_triggers(length, numbers, words):
             if i % number == 0:
                 output += word
         if output == "":
-            output += i
+            output += str(i)
         print(output)
 
 
@@ -98,11 +98,12 @@ def numbers_and_words_are_relation_1(length, triggers):
     Let's increase the cohesion of our code, and keep the number and words together.
 
     Now we can create a Class with two fields, but this is python! Lets use a dictionary.
-    You may jump to a list of dicts e.g. [{'number':3,'word':'Fizz'},{'number':5,'word':'Buzz'}]}
+    You may jump to a list of dicts e.g. [{'number':3,'word':'Fizz'},{'number':5,'word':'Buzz'}]
+      this is effectively the same as using a class
     But each number must have a unique word so we can index our dict on the numbers e.g. {3:'Fizz',5:'Buzz'}
         Kevin why don't we just use a list of tuples? We can, and will, I just like dict's so I put them first.
             As of python 3.6 they take up about as much space as list and are ordered,
-            More info  in this Raymond Hettinger talk here https://www.youtube.com/watch?v=npw4s1QTmPg
+            More info in this Raymond Hettinger talk here https://www.youtube.com/watch?v=npw4s1QTmPg
 
 
     Calling numbers_and_words_are_relation_1(100, {3:'Fizz',5:'Buzz'}) would have the same effect as above.
@@ -114,7 +115,7 @@ def numbers_and_words_are_relation_1(length, triggers):
             if i % number == 0:
                 output += word
         if output == "":
-            output += i
+            output += str(i)
         print(output)
 
 
@@ -128,7 +129,7 @@ def numbers_and_words_are_relation_2(length, triggers):
             if i % trigger.number == 0:
                 output += trigger.word
         if output == "":
-            output += i
+            output += str(i)
         print(output)
 
 
@@ -147,5 +148,6 @@ def numbers_and_words_are_relation_3(length, triggers):
             if i % number == 0:
                 output += word
         if output == "":
-            output += i
+            output += str(i)
         print(output)
+
