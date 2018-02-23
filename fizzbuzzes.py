@@ -50,11 +50,11 @@ def naive_approach_3():
         print(output)
 
 
-def lets_add_parameters(fizz_number, buzz_number, length):
+def lets_add_parameters(length, fizz_number, buzz_number):
     """ Hey Kevin, what if we need to print fizz when a number is divisible by 7, not 3‽ (It's an interrobang ! + ? = ‽)
     Easy fix, we take our best implementation (so far), and parametrise it!
 
-    Calling lets_add_parameters(3,5,100) would have the same effect as the above examples.
+    Calling lets_add_parameters(100, 3, 5) would have the same effect as the above examples.
 
     Note - if you pass a negative length there will be no output,
            you can make range count backwards, by setting step=-1 (the 3rd argument)
@@ -65,6 +65,28 @@ def lets_add_parameters(fizz_number, buzz_number, length):
             output += "Fizz"
         if i % buzz_number == 0:
             output += "Buzz"
+        if output == "":
+            output += i
+        print(output)
+
+
+def what_if_we_want_more_triggers(length, numbers, words):
+    """ Hey Kevin, turns out fizz needs to print on 3, it's Bazz that needs to print on 7.
+    Now we can add Bazz very easily, take in a extra parameter `bazz_number` and add this after the Buzz check
+    ```
+    if i % bazz_number == 0:
+        output += "Bazz"
+    ```
+    But this isn't going to work if we keep needing to add new numbers,
+
+    Calling what_if_we_want_more_triggers(100, [3, 5], ['Fizz', 'Buzz']) would have the same effect as the above.
+
+    """
+    for i in range(1, length + 1):
+        output = ""
+        for number, word in zip(numbers, words):
+            if i % number == 0:
+                output += word
         if output == "":
             output += i
         print(output)
