@@ -25,8 +25,9 @@ def naive_approach_2():
 
 def naive_approach_3():
     """ Here we make it DRY, and hide the double comparison,
-    and can convince ourselves saying "we are only checking each modulo once"
-    the double companions is hiding here `output == "" `
+    and can convince ourselves saying "we are only checking each modulo once".
+    The double companions is hiding here `output == "" `
+    The beauty of FizzBuzz is its always hiding somewhere.
     """
     for i in range(1, 101):
         output = ""
@@ -37,3 +38,24 @@ def naive_approach_3():
         if output == "":
             output += i
         print(output)
+
+
+def lets_add_parameters(fizz_number, buzz_number, length):
+    """ Hey kevin, what if we need to print fizz when a number is divisible by 7, not 3‽ (It's an interrobang ! + ? = ‽)
+    Easy fix, we take our best implementation (so far), and parametrise it!
+
+    Calling lets_add_parameters(3,5,100) would have the same effect as the above examples.
+
+    Note - if you pass a negative length there will be no output,
+           you can make range count backwards, by setting step=-1 (the 3rd argument)
+    """
+    for i in range(1, length + 1):
+        output = ""
+        if i % fizz_number == 0:
+            output += "Fizz"
+        if i % buzz_number == 0:
+            output += "Buzz"
+        if output == "":
+            output += i
+        print(output)
+
