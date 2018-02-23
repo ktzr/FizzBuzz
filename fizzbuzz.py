@@ -151,3 +151,30 @@ def numbers_and_words_are_relation_3(length, triggers):
             output += str(i)
         print(output)
 
+
+def lets_change_the_operation(length, triggers, operation):
+    """ Im going to continue from numbers_and_words_are_relation_1 as I like that implantation the most.
+    Kevin we are board of doing simple division, we want to say the word,
+      when the square root is divisible by the number!
+
+    We can take in the operation as a variable this means we aren't constrained to always doing mod, simple change.
+
+    But how do we use it we take in a function, operation with to args,
+      the number we are on and the trigger number, that returns a bool.
+    the operation for the above scenario would be `lambda number, trigger: int(math.sqrt(number)) % trigger == 0`
+
+
+    Calling lets_change_the_operation(100, {3:'Fizz',5:'Buzz'},lambda number, trigger: number % trigger)
+      would have the same effect as above.
+
+    """
+    for i in range(1, length + 1):
+        output = ""
+        for number, word in triggers.items():
+            if operation(i, number):
+                output += word
+        if output == "":
+            output += str(i)
+        print(output)
+
+
