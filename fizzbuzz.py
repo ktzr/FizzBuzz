@@ -54,7 +54,7 @@ def lets_add_parameters(length, fizz_number, buzz_number):
     """ Hey Kevin, what if we need to print fizz when a number is divisible by 7, not 3‽ (It's an interrobang ! + ? = ‽)
     Easy fix, we take our best implementation (so far), and parametrise it!
 
-    Calling lets_add_parameters(100, 3, 5) would have the same effect as the above examples.
+    Calling lets_add_parameters(100, 3, 5) would have the same effect as above examples.
 
     Note - if you pass a negative length there will be no output,
            you can make range count backwards, by setting step=-1 (the 3rd argument)
@@ -79,12 +79,71 @@ def what_if_we_want_more_triggers(length, numbers, words):
     ```
     But this isn't going to work if we keep needing to add new numbers,
 
-    Calling what_if_we_want_more_triggers(100, [3, 5], ['Fizz', 'Buzz']) would have the same effect as the above.
+    Calling what_if_we_want_more_triggers(100, [3, 5], ['Fizz', 'Buzz']) would have the same effect as above.
 
     """
     for i in range(1, length + 1):
         output = ""
         for number, word in zip(numbers, words):
+            if i % number == 0:
+                output += word
+        if output == "":
+            output += i
+        print(output)
+
+
+def numbers_and_words_are_relation_1(length, triggers):
+    """ In the last example we need to pass both a numbers and words argument.
+    They are related to each other but that relation cant be seen in our code.
+    Let's increase the cohesion of our code, and keep the number and words together.
+
+    Now we can create a Class with two fields, but this is python! Lets use a dictionary.
+    You may jump to a list of dicts e.g. [{'number':3,'word':'Fizz'},{'number':5,'word':'Buzz'}]}
+    But each number must have a unique word so we can index our dict on the numbers e.g. {3:'Fizz',5:'Buzz'}
+        Kevin why don't we just use a list of tuples? We can, and will, I just like dict's so I put them first.
+            As of python 3.6 they take up about as much space as list and are ordered,
+            More info  in this Raymond Hettinger talk here https://www.youtube.com/watch?v=npw4s1QTmPg
+
+
+    Calling numbers_and_words_are_relation_1(100, {3:'Fizz',5:'Buzz'}) would have the same effect as above.
+
+    """
+    for i in range(1, length + 1):
+        output = ""
+        for number, word in triggers.items():
+            if i % number == 0:
+                output += word
+        if output == "":
+            output += i
+        print(output)
+
+
+def numbers_and_words_are_relation_2(length, triggers):
+    """ This is basally the same as the last example but we use a list of tuples, instead of dicts.
+        Calling numbers_and_words_are_relation_2(100, [(3,'Fizz'),(5,'Buzz')]) would have the same effect as above.
+    """
+    for i in range(1, length + 1):
+        output = ""
+        for trigger in triggers:
+            if i % trigger.number == 0:
+                output += trigger.word
+        if output == "":
+            output += i
+        print(output)
+
+
+from fizzbuzz_triggers import Trigger
+
+
+def numbers_and_words_are_relation_3(length, triggers):
+    """ Kevin we want to use classes!
+        Ok.
+        Calling numbers_and_words_are_relation_3(100, [Trigger(3,'Fizz'),Trigger(5,'Buzz')])
+          would have the same effect as above.
+    """
+    for i in range(1, length + 1):
+        output = ""
+        for number, word in triggers:
             if i % number == 0:
                 output += word
         if output == "":
