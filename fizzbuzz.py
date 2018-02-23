@@ -164,7 +164,7 @@ def lets_change_the_operation(length, triggers, operation):
     the operation for the above scenario would be `lambda number, trigger: int(math.sqrt(number)) % trigger == 0`
 
 
-    Calling lets_change_the_operation(100, {3:'Fizz',5:'Buzz'},lambda number, trigger: number % trigger)
+    Calling lets_change_the_operation(100, {3:'Fizz',5:'Buzz'},lambda number, trigger: number % trigger == 0)
       would have the same effect as above.
 
     """
@@ -178,3 +178,25 @@ def lets_change_the_operation(length, triggers, operation):
         print(output)
 
 
+def we_cant_test_this(length, triggers, operation):
+    """ Kevin how we meant to test this?
+    Our functions doesnt alter state or return anything, we can't test this.
+      (technically printing to stout is altering state and testable but lets not go down that road)
+
+    Easy fix, we return a list of strings, the person calling the function can handle the io.
+    This also solve the problem of "what if I don't want to print the results"
+
+    Calling we_cant_test_this(100, {3:'Fizz',5:'Buzz'},lambda number, trigger: number % trigger == 0)
+      would have the same effect as above.
+
+    """
+    output = []
+    for i in range(1, length + 1):
+        candidate = ""
+        for number, word in triggers.items():
+            if operation(i, number):
+                candidate += word
+        if candidate == "":
+            candidate += str(i)
+        output.append(candidate)
+    return output
