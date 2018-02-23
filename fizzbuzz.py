@@ -186,6 +186,8 @@ def we_cant_test_this(length, triggers, operation):
     Easy fix, we return a list of strings, the person calling the function can handle the io.
     This also solve the problem of "what if I don't want to print the results"
 
+    See `fizzbuzz_triggers.py` for example tests.
+
     Calling we_cant_test_this(100, {3:'Fizz',5:'Buzz'},lambda number, trigger: number % trigger == 0)
       would have the same effect as above.
 
