@@ -202,3 +202,20 @@ def we_cant_test_this(length, triggers, operation):
             candidate += str(i)
         output.append(candidate)
     return output
+
+
+def one_liner():
+    """ I quite like this implementation.
+    It's not real an improvement on the above, but it does solve our original requirements,
+      and i have nowhere else to put it
+
+    For a sequence of numbers X, for x in X.
+    x%n will cycle from 0 to n-1.
+    as range starts at 0, the n-1's apreat every n'th index.
+    Interger division by n-1 will replace all number less then n-1 with 0 and those equal with 1.
+    multiply you word by ether 1 or 0, gives the word or the empty string.
+    if none if you have the empty sting pring x+1 (remember FizzBuzz starts at 1)
+    Yes the irony if a 11 line comment on a 1 line piece of code is not lost on me.
+    """
+    for x in range(100): print(x % 3 // 2 * 'Fizz' + x % 5 // 4 * 'Buzz' or x + 1)
+
