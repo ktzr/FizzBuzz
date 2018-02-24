@@ -1,6 +1,9 @@
-def naive_aproach_0():
+""" I'm starting from a bad FizzBuss implementation, and making small step by step changes to improve it """
+
+
+def naive_approach_0():
     """ Please if you ever get asked to write FizzBuzz, DON'T do this!
-    Yes it works, no you wont the the job. """
+    Yes it works, no you wont get the job. """
     print("1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz\n16\n17\nFizz\n19\nBuzz\nFizz\n22\n"
           "23\nFizz\nBuzz\n26\nFizz\n28\n29\nFizzBuzz\n31\n32\nFizz\n34\nBuzz\nFizz\n37\n38\nFizz\nBuzz\n41\nFizz\n43\n"
           "44\nFizzBuzz\n46\n47\nFizz\n49\nBuzz\nFizz\n52\n53\nFizz\nBuzz\n56\nFizz\n58\n59\nFizzBuzz\n61\n62\nFizz\n"
