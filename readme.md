@@ -26,3 +26,13 @@ But realised, most implementations follow the same principals, or are slight imp
 
 I thought, "Why not structure it as a tutorial, mabey someone will find it useful?". So I did.
 
+## The Implementations Get More Complex as I Go Down.
+Yes, in general they get more complex. This however does not mean they are better.
+My modifications get a bit ridicules near the end, Im a firm beleiver of [YAGNI](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it), just because they later implementations let you do more, you can always make the changes as you need them.
+
+Implanting things just because you think you are going to need them, will result in a massive waist of time 90% of the time you aren't going to use it and it just bloats your code.
+Wait until you need it then implement it.
+
+## I Want More FizzBuzz
+- Joel Grus wrote [Fizz Buzz in Tensorflow](tensorflow) and It's well worth a read
+- If you need "Enterprise Quality" FizzBuzz check out [FizzBuzz Enterprise Edition](https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition) Its funny and sad at the same time.
