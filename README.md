@@ -7,6 +7,8 @@ You might even have been asked it in an interview.
 
 I'm starting from the worst implementation I can think of and making small changes to improve it, set by step.
 
+See the code in [fizzbuzz.py](fizzbuzz.py)
+
 ## What Is FizzBuzz
 Its a game made to teach children about, and practice division.
 
