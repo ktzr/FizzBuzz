@@ -3,7 +3,7 @@
 
 def naive_approach_0():
     """ Please if you ever get asked to write FizzBuzz, DON'T do this!
-    Yes it works, no you wont get the job. """
+    Yes it works, no you won't get the job. """
     print("1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz\n16\n17\nFizz\n19\nBuzz\nFizz\n22\n"
           "23\nFizz\nBuzz\n26\nFizz\n28\n29\nFizzBuzz\n31\n32\nFizz\n34\nBuzz\nFizz\n37\n38\nFizz\nBuzz\n41\nFizz\n43\n"
           "44\nFizzBuzz\n46\n47\nFizz\n49\nBuzz\nFizz\n52\n53\nFizz\nBuzz\n56\nFizz\n58\n59\nFizzBuzz\n61\n62\nFizz\n"
@@ -57,7 +57,7 @@ def lets_add_parameters(length, fizz_number, buzz_number):
     """ Hey Kevin, what if we need to print fizz when a number is divisible by 7, not 3‽ (It's an interrobang ! + ? = ‽)
     Easy fix, we take our best implementation (so far), and parametrise it!
 
-    Calling lets_add_parameters(100, 3, 5) would have the same effect as above examples.
+    Calling lets_add_parameters(100, 3, 5) would have the same effect as the above examples.
 
     Note - if you pass a negative length there will be no output,
            you can make range count backwards, by setting step=-1 (the 3rd argument)
@@ -157,7 +157,7 @@ def numbers_and_words_are_relation_3(length, triggers):
 
 def lets_change_the_operation(length, triggers, operation):
     """ Im going to continue from numbers_and_words_are_relation_1 as I like that implantation the most.
-    Kevin we are board of doing simple division, we want to say the word,
+    Kevin we are bored of doing simple division, we want to say the word,
       when the square root is divisible by the number!
 
     We can take in the operation as a variable this means we aren't constrained to always doing mod, simple change.
@@ -209,15 +209,15 @@ def we_cant_test_this(length, triggers, operation):
 
 def one_liner():
     """ I quite like this implementation.
-    It's not real an improvement on the above, but it does solve our original requirements,
-      and i have nowhere else to put it
-
+    It's not really an improvement on the above, but it does solve our original requirements,
+      and I have nowhere else to put it
     For a sequence of numbers X, for x in X.
     x%n will cycle from 0 to n-1.
     as range starts at 0, the n-1's apreat every n'th index.
-    Interger division by n-1 will replace all number less then n-1 with 0 and those equal with 1.
-    multiply you word by ether 1 or 0, gives the word or the empty string.
-    if none if you have the empty sting pring x+1 (remember FizzBuzz starts at 1)
+    Integer division by n-1 will replace all number less then n-1 with 0 and those equal with 1.
+    Multiplying your word by ether 1 or 0, gives the word or the empty string.
+    If none if you have the empty sting print x+1 (remember FizzBuzz starts at 1)
+
     Yes the irony if a 11 line comment on a 1 line piece of code is not lost on me.
     """
     for x in range(100): print(x % 3 // 2 * 'Fizz' + x % 5 // 4 * 'Buzz' or x + 1)
