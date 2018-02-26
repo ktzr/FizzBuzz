@@ -36,5 +36,5 @@ Implanting things just because you think you are going to need them, will result
 Wait until you need it then implement it.
 
 ## I Want More FizzBuzz
-- Joel Grus wrote [Fizz Buzz in Tensorflow](tensorflow) and It's well worth a read
+- Joel Grus wrote [Fizz Buzz in Tensorflow](http://joelgrus.com/2016/05/23/fizz-buzz-in-tensorflow/) and It's well worth a read
 - If you need "Enterprise Quality" FizzBuzz check out [FizzBuzz Enterprise Edition](https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition) Its funny and sad at the same time.
