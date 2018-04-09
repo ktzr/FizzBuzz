@@ -10,7 +10,7 @@ I'm starting from the worst implementation I can think of and making small chang
 See the code in [fizzbuzz.py](fizzbuzz.py)
 
 ## What Is FizzBuzz
-Its a game made to teach children about, and practice division.
+It's a game made to teach children about, and practice division.
 
 You sit in a circle and incrementally count from 1 to 100, you say a number then the person next to you says the next number.
 
@@ -23,17 +23,16 @@ You sit in a circle and incrementally count from 1 to 100, you say a number then
 ## Why Did You Write This?
 To be honest im not 100% sure.
 
-I started because I want to see how many FizzBuzz implementations I could come up with.
-But realised, most implementations follow the same principals, or are slight improvements on each other.
+I started because I want to see how many FizzBuzz implementations I could come up with but realised most implementations follow the same principals or are slight improvements on each other.
 
-I thought, "Why not structure it as a tutorial, mabey someone will find it useful?". So I did.
+I thought, "Why not structure it as a tutorial, maybe someone will find it useful?". So I did.
 
 ## The Implementations Get More Complex as I Go Down.
 Yes, in general they get more complex. This however does not mean they are better.
-My modifications get a bit ridicules near the end, Im a firm beleiver of [YAGNI](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it), just because they later implementations let you do more, you can always make the changes as you need them.
+My modifications get a bit ridiculous near the end, I'm a firm believer of [YAGNI](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it) - things must only be implemented when they are needed, not when you think that you might need them in the future.
 
-Implanting things just because you think you are going to need them, will result in a massive waist of time 90% of the time you aren't going to use it and it just bloats your code.
-Wait until you need it then implement it.
+Implementing things just because you think you are going to need them will result in a massive waste of time, 90% of the time you aren't going to use it and it just bloats your code.
+Wait until you need it then implement it!
 
 ## I Want More FizzBuzz
 - Joel Grus wrote [Fizz Buzz in Tensorflow](http://joelgrus.com/2016/05/23/fizz-buzz-in-tensorflow/) and It's well worth a read
